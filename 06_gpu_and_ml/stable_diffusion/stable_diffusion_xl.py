@@ -2,6 +2,7 @@
 # output-directory: "/tmp/stable-diffusion-xl"
 # args: ["--prompt", "An astronaut riding a green horse"]
 # runtimes: ["runc", "gvisor"]
+# tags: ["use-case-image-video-3d"]
 # ---
 # # Stable Diffusion XL 1.0
 #
@@ -157,7 +158,7 @@ def main(prompt: str = "Unicorns and leprechauns sign a peace treaty"):
     if not dir.exists():
         dir.mkdir(exist_ok=True, parents=True)
 
-    output_path = dir / "output.png"
+    output_path = dir / "output.jpg"
     print(f"Saving it to {output_path}")
     with open(output_path, "wb") as f:
         f.write(image_bytes)

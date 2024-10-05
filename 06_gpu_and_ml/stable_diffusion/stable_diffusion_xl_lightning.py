@@ -1,3 +1,12 @@
+# ---
+# output-directory: "/tmp/stable-diffusion-xl-lightning"
+# tags: ["use-case-image-video-3d"]
+# ---
+# # Run SDXL Lightning on Modal
+#
+# This example runs [SDXL-Lightning](https://huggingface.co/ByteDance/SDXL-Lightning) by ByteDance, a fast text-to-image model that generates high quality images in just a few steps.
+#
+
 from pathlib import Path
 
 import modal

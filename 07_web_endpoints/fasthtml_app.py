@@ -2,6 +2,17 @@
 # deploy: true
 # cmd: ["modal", "serve", "07_web_endpoints/fasthtml_app.py"]
 # ---
+
+# # Deploy a FastHTML app with Modal
+
+# This example shows how you can deploy a FastHTML app with Modal.
+# [FastHTML](https://www.fastht.ml/) is a Python library built on top of [HTMX](https://htmx.org/)
+# which allows you to create entire web applications using only Python.
+
+# The integration is pretty simple, thanks to the ASGI standard.
+# You just need to define a function returns your FastHTML app
+# and is decorated with `app.function` and `modal.asgi_app`.
+
 import modal
 
 app = modal.App("example-fasthtml")
@@ -12,7 +23,7 @@ app = modal.App("example-fasthtml")
         "python-fasthtml==0.5.2"
     )
 )
-@modal.asgi_app()  # must define a function decorated with asgi_app and app.function that returns your fastHTML app
+@modal.asgi_app()
 def serve():
     import fasthtml.common as fh
 
